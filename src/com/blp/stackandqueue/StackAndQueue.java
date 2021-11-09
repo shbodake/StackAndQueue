@@ -5,10 +5,16 @@ public class StackAndQueue {
         System.out.println("Welcome to the stack program");
         Operation operation = new Operation();
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Press '1' to add element at the start  ");
+        System.out.println("Press '1' to add element at the start" + "Enter 2 to show the peek element");
         switch (scanner.nextInt()) {
             case 1:
                 operation.addElement();
+                break;
+            case 2:
+                operation.peek();
+                break;
+            case 3:
+                operation.pop();
                 break;
         }
         scanner.close();
