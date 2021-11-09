@@ -20,6 +20,21 @@ public class Stack {
         return newnode;
     }
 
+    public int peek(){
+        System.out.println("Top element is "+this.top.data);
+        return top.data;
+    }
+
+    public void pop() {
+        Node temp =top;
+        while (temp != null){
+            Node tempNode = this.head;
+            this.head = tempNode.next;
+            temp=temp.next;
+        }
+
+    }
+
     public void display(){
         if (head == null) {
             System.out.println("Linked list is Empty");
