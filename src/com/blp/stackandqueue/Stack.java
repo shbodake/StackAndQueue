@@ -35,6 +35,20 @@ public class Stack {
 
     }
 
+    public void queue(int data) {
+        Node newNode=new Node(data);
+        if (head == null) {
+            head = newNode;
+            tail = newNode;
+            top=head;
+        } else {
+            Node tempNode=tail;
+            this.tail=newNode;
+            tempNode.next=tail;
+        }
+    }
+
+
     public void display(){
         if (head == null) {
             System.out.println("Linked list is Empty");
