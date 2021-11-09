@@ -6,7 +6,7 @@ public class StackAndQueue {
         Operation operation = new Operation();
         Scanner scanner = new Scanner(System.in);
         System.out.println("Press '1' to add element at the start" + "Enter 2 to show the peek element" +
-                "Enter 3 to show the pop \n" + "Enter 4 to queue the element");
+                "Enter 3 to show the pop \n" + "Enter 4 to queue the element" + "Enter 5 to dequeue the element");
         switch (scanner.nextInt()) {
             case 1:
                 operation.addElement();
@@ -19,6 +19,9 @@ public class StackAndQueue {
                 break;
             case 4:
                 operation.queueElement();
+                break;
+            case 5:
+                operation.dequeueElement();
                 break;
         }
         scanner.close();
